@@ -1,0 +1,274 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+section{
+    width: 100%;
+    min-width: 550px;
+    height: 100vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont {
+    width: 50%;
+    min-width: 400px;
+    position: relative;
+}
+
+#video {
+    width: 100%;
+}
+
+video#video::webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+video#video::webkit-media-controls {
+    display: none !important;
+}
+
+.prog {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ffffff47;
+    height: 5px;
+    margin-top: 9.2px;
+    position: relative;
+    border-radius: 40px;
+    /* transition: all .2s linear; */
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: coral;
+    border-radius: 40px;
+    margin-top: 0.5px;
+    /* transition: all 1s linear; */
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: none;
+    outline: none;
+    opacity: 0.5;
+    position: absolute;
+    top: -10.7px;
+    margin: 0%;
+    display: none;
+    /* transition: all .2s linear; */
+}
+
+.prog:hover .slider,
+.vol-prog:hover .volume {
+    display: block;
+}
+
+.prog:hover {
+    cursor: pointer;
+    background-color: #ffffff8f;
+}
+
+.prog:hover .slider::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+}
+
+.slider:hover,
+.volume:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 5px;
+    background: cornflowerblue;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+.slider::-moz-range-thumb {
+    width: 5px;
+    height: 5px;
+    background: cornflowerblue;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+.volume {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: none;
+    outline: none;
+    opacity: 0.5;
+    position: absolute;
+    top: -9.7px;
+    margin: 0%;
+    display: none;
+}
+
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: cornflowerblue;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #ffffffc4;
+    font-weight: 100;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.fa-play,
+.fa-pause {
+    height: 60px;
+    width: 60px;
+    background-color: #000000a8;
+    border-radius: 50%;
+}
+
+.fa-play:before {
+    position: relative;
+    left: 4%;
+    top: 25%;
+}
+
+.fa-pause:before {
+    position: relative;
+    top: 25%;
+}
+
+.fa-backward,
+.fa-forward {
+    height: 35px;
+    width: 35px;
+    background-color: #000000a8;
+    border-radius: 50%;
+}
+
+.fa-backward:before,
+.fa-forward:before {
+    position: relative;
+    left: -3%;
+    top: 30%;
+}
+
+.fa-forward:before {
+    left: 3%;
+}
+
+i:hover {
+    color: white;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: inline-block;
+}
+
+.vol {
+    display: flex;
+}
+
+.vol-prog {
+    width: 0%;
+    transition: all .5s ease-out;
+    margin-right: 5px;
+}
+
+.vol:hover .vol-prog {
+    display: block;
+    width: 15%;
+}
+
+p {
+    margin-top: 4.5px;
+    margin-bottom: 0px;
+    font-family: sans-serif;
+    color: white;
+    font-size: 80%;
+}
+
+.controls {
+    background: black;
+    padding: 0 10px;
+    padding-bottom: 10px;
+    margin: 0%;
+}
+
+.over {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+}
+
+.flex{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.overlay {
+    /* display: none; */
+    transition: all .5s ease;
+}
+
+.cont:hover .overlay {
+    display: block;
+}
+
+.over .fa-play,
+.over .fa-pause {
+    flex-grow: .5;
+    font-size: 30px;
+}
+
+.vol {
+    padding-top: 5px;
+}
+
+#fscr {
+    position: absolute;
+    right: 8px;
+}

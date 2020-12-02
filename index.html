@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Layer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="cont">
+            <video id="video" src="assets/video/1min-Video.mp4"></video>
+
+            <div class="over">
+                <div class="flex">
+                    <button class="overlay" id="seekback"><i class="fas fa-backward"></i></button>
+                    <button class="overlay" id="pp"><i id="play" class="fas fa-play"></i><i id="pause" class="fas fa-pause hide"></i></button>
+                    <button class="overlay" id="seekplus"><i class="fas fa-forward"></i></button>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="prog">
+                    <div class="progress" id="tchange">
+                    </div>
+                    <input type="range" name="Time" class="slider" id="range" min="0" max="100" value="0">
+                </div>
+                <div class="vol">
+                    <button id="stop"><i class="fas fa-stop"></i></button>
+                    <button id="sound">
+                        <i class="fas fa-volume-mute hide"></i>
+                        <i class="fas fa-volume-down hide"></i>
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <div class="prog vol-prog">
+                        <div class="progress vol-progress" id="vchange">
+                        </div>
+                        <input type="range" name="Vol" class="volume" id="volume" min="0" max="100" value="0"
+                            step=".0.1">
+                    </div>
+                    <p class="hide"><span id="ctime"></span> / <span id="ttime"></span></p>
+                    <button id="fscr"><i class="fas fa-expand"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/322ecde44c.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
